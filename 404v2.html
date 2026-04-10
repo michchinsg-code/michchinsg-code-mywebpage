@@ -84,7 +84,31 @@
       top: 10px;
     }
 
-   
+   .main-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 200%;
+  max-width: 1200px;
+}
+
+.image-box {
+  background: rgb(13, 14, 13);
+  padding: 25px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 10%;
+}
+
+.image-box img {
+  width: 280px;
+  height: auto;
+  border-radius: 50px;
+  display: cube;
+}
+
+
  .fake-header {
   position: fixed;
   top: 0;
@@ -114,30 +138,38 @@
   <div class="fake-header">
   <img src="mandai-header.png" alt="Mandai Header">
 </div>
+<div class="main-layout">
 
-<div class="container">
-  <h1>404 <i class="fa-solid fa-binoculars fa-x"></i></h1>
-  
-  <p>Page not found... but hey, lets get brainy!</p>
+  <!-- LEFT SIDE (QUIZ) -->
+  <div class="container">
+    <h1>404 <i class="fa-solid fa-binoculars fa-x"></i></h1>
+    
+    <p>Page not found... but hey, lets get brainy!</p>
 
-  <div class="question" id="question">Loading question...</div>
+    <div class="question" id="question">Loading question...</div>
+    <div class="answers" id="answers"></div>
+    <div id="result"></div>
 
-  <div class="answers" id="answers"></div>
+    <div id="explanation">
+      <strong style="display:block; text-align:center;">
+        Why did the Bali tiger go extinct?
+      </strong><br>
+      The Bali tiger went extinct because: Humans destroyed its forest, hunted it directly, and removed its food supply — and because it was isolated on a small island, it had no chance to recover.
+    </div>
 
-  <div id="result"></div>
+    <div id="score">Score: 0</div>
 
-  <!-- ✅ EXPLAINER -->
-  <div id="explanation">
-    <strong style="display:block; text-align:center;">
-  Why did the Bali tiger go extinct?</strong><br>
-    The Bali tiger went extinct because: Humans destroyed its forest, hunted it directly, and removed its food supply — and because it was isolated on a small island, it had no chance to recover.
+    <a href="https://www.mandai.com/en/learn-with-us/action-for-wildlife.html/">Learn about wildlife conservation</a><br>
+    <a href="https://www.mandai.com/en.html/">Go Home</a>
   </div>
 
-  <div id="score">Score: 0</div>
+  <!-- RIGHT SIDE (IMAGE) -->
+  <div class="image-box">
+    <img src="bali-tiger-copy.png" alt="Bali Tiger">
+  </div>
 
-  <a href="https://www.mandai.com/en/learn-with-us/action-for-wildlife.html/">Learn about wildlife conservation</a><br>
-  <a href="https://www.mandai.com/en.html/">Go Home</a>
 </div>
+
 
 <script>
 const quiz = [
