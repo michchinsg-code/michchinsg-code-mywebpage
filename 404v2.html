@@ -100,6 +100,8 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   width: 10%;
   margin-top: 130px;
+
+  display: none; /* 👈 HIDE IT INITIALLY */
 }
 
 .image-box img {
@@ -217,16 +219,18 @@ function loadQuestion() {
 }
 
 function checkAnswer(i) {
-  if (i === quiz[current].correct) {
-    resultEl.textContent = "✅ Correct!";
-    score++;
+if (i === quiz[current].correct) {
+  resultEl.textContent = "✅ Correct!";
+  score++;
 
-    // Show explanation
-    explanationEl.style.display = "block";
+  explanationEl.style.display = "block";
 
-    // Move to next question after delay
-    current++;
-   
+  // 👇 SHOW TIGER ONLY NOW
+  document.querySelector(".image-box").style.display = "block";
+
+  current++;
+  setTimeout(loadQuestion, 6000);
+
 
   } else {
     wrongAttempts++;
